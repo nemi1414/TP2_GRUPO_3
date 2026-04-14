@@ -95,8 +95,8 @@ public class Persona {
 	
 	public static void verificarDNI(String dni) throws ExVerificarDNI {
 
-	    // Verifica longitud 8 digitos
-	    if (dni.length() != 8) {
+	    // Verifica que sean 8 digitos
+	    if (!dni.matches("\\d{8}")) {
 	        throw new ExVerificarDNI("El DNI debe tener exactamente 8 dígitos");
 	    }
 
