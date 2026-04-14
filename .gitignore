@@ -1,0 +1,11 @@
+# Eclipse
+.metadata/
+.settings/
+*.log
+
+# Compilados
+bin/
+target/
+
+# Otros
+*.class
