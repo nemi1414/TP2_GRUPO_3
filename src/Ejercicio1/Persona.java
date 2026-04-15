@@ -1,5 +1,6 @@
 package Ejercicio1;
 import java.time.LocalDate;
+import java.util.Objects;
 
 
 public class Persona {
@@ -93,6 +94,19 @@ public class Persona {
 	           ", Direccion=" + direccion + ", Telefono=" + telefono + ", Email=" + email + "]";
 	}
 	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Persona persona = (Persona) o;
+		return Objects.equals(dni, persona.dni);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
 	public static void verificarDNI(String dni) throws ExVerificarDNI {
 
 	    // Verifica que sean 8 digitos
