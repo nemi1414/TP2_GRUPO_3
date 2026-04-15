@@ -2,6 +2,7 @@ package Ejercicio1;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MainEjercicio1_b {
 
@@ -26,6 +27,13 @@ public class MainEjercicio1_b {
 
         // Mensaje para verificar la carga exitosa
         System.out.println("Se han agregado exitosamente " + listaEmpleados.size() + " empleados al ArrayList.");
+        
+        Iterator<Empleado> it = listaEmpleados.iterator();
+        while (it.hasNext()) {
+            Empleado emp = it.next();
+            System.out.println(emp.getNombre() + " " + emp.getApellido());
+        }
+        
         
     }
 }
