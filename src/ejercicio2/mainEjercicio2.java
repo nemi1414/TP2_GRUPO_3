@@ -1,7 +1,7 @@
 package ejercicio2;
 import java.util.ArrayList;
 
-public class MainEjercicio2 {
+public class mainEjercicio2 {
 
 	public static void main(String[] args) {
 				
