@@ -9,6 +9,12 @@ public class mainEjercicio2 {
 		
 	
 		//Agregar 3 Polideportivos:
+		Polideportivo p1 = new Polideportivo("Poli Norte", 1500.0, 1);
+		Polideportivo p2 = new Polideportivo("Poli Sur", 2000.0, 2);
+		Polideportivo p3 = new Polideportivo("Poli Centro", 1800.0, 1);
+		lista.add(p1);
+		lista.add(p2);
+		lista.add(p3);
 		
 		
 		//Agregar 2 Edificios de oficinas:
