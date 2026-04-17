@@ -1,5 +1,6 @@
 package Ejercicio1;
 import java.time.LocalDate;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 public class MainEjercicio1_c {
@@ -15,18 +16,20 @@ public class MainEjercicio1_c {
 		 Empleado e5 = new Empleado("38999888", "Magnus", "Carlsen", LocalDate.of(1990, 2,18), "Masculino", "Av. chess 24", "11567899", "magnus.carlsen@gmail.com", "devops");
 
 
-		listaEmpleados.add(e1);
-		listaEmpleados.add(e2);
-		listaEmpleados.add(e3);
-		listaEmpleados.add(e4);
 		listaEmpleados.add(e5);
+		listaEmpleados.add(e1);
+		listaEmpleados.add(e3);
+		listaEmpleados.add(e2);
+		listaEmpleados.add(e4);
+		listaEmpleados.add(e4);
+
 		
-		Iterator it = new Iterator();
+		Iterator<Empleado> it = listaEmpleados.iterator();		
 		
-		
-		
-		System.out.println(listaEmpleados);
-		
+		while(it.hasNext()) {
+			Empleado em = it.next(); 
+			System.out.println(em.toString());
+		}
 	}
 
 }
