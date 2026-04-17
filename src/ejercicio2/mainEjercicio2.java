@@ -1,5 +1,6 @@
 package ejercicio2;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class mainEjercicio2 {
 
@@ -28,7 +29,30 @@ public class mainEjercicio2 {
 		
 		
 		// Iterador
-		
+		Iterator<IEdificio> it = lista.iterator();
+
+		while (it.hasNext()) {
+		    IEdificio elemento = it.next();
+
+		    // Si es Polideportivo
+		    if (elemento instanceof Polideportivo) {
+		        Polideportivo p = (Polideportivo) elemento;
+		        System.out.println("Polideportivo:");
+		        System.out.println("  Nombre: " + p.getNombre());
+		        System.out.println("  Superficie: " + p.getSuperficieEdificio());
+		        System.out.println("  Tipo de Instalación: " + p.getTipoDeInstalacion());
+		        System.out.println("-----------------------------------");
+		    }
+
+		    // Si es Edificio de Oficinas
+		    else if (elemento instanceof EdificioDeOficinas) {
+		        EdificioDeOficinas e = (EdificioDeOficinas) elemento;
+		        System.out.println("Edificio de Oficinas:");
+		        System.out.println("  Número de oficinas: " + e.getNumeroDeOficinas());
+		        System.out.println("  Superficie: " + e.getSuperficieEdificio());
+		        System.out.println("-----------------------------------");
+		    }
+		}
 	}
 
 }
