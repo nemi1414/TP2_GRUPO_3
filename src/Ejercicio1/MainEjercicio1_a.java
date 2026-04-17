@@ -16,7 +16,6 @@ public class MainEjercicio1_a {
 			    } catch (ExVerificarDNI e) {
 			        System.out.println("Persona 1 no agregada por no verificar el DNI");
 			    }
-		
 			    // Caso 2
 			    try {
 			        Persona.verificarDNI(p2.getDni());
